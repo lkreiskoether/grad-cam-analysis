@@ -1,10 +1,21 @@
 # grad-cam_analysis
 Gradient-weighted Class Activation Mapping [1] is a technique which produces visual explanations for decisions made by Convolutional Neural Networks without the need for architectural changes or retraining of the network under inspection.
 
-This code offers a Grad-CAM based analysis for frozen graph models in TensorFlow 1. The heatmaps are displayed together with the original images by default. Also, the results can be saved as images via the flag 'save_images'. More details about important parameters can be found in the comments of the code.
+This code offers a Grad-CAM based analysis for frozen graph models in TensorFlow 1. Images consisting of the heatmaps together with the original images are produced and stored in the defined image folder. More details about the implementation can be found in the comments of the code. The example images in the 'color' folder are taken from [2].
+
+## Setup
+Clone the repository:
+```sh
+git clone https://github.com/lkreiskoether/grad-cam_analysis.git
+```
+
+## Example usage
+```sh
+python grad-cam_analysis.py model/frozen_graph.pb color
+```
 
 ## Example results
-Example output for one image of the 'color' class of the metal nuts objects from MVTec AD [2].
+Example of one of the produced outputs running the example from above:
 ![](grad-cam_image_0.png)
 
 ## Acknowledgements

@@ -170,7 +170,7 @@ for counter, filename in enumerate(list_input_imgs):
     f, axarr = plt.subplots(1, 2)
     axarr[0].imshow(cam)
     axarr[1].imshow(img.astype(np.uint8))
-    if not os.path.exists(write_path + '/grad-cam_images'):
-        os.makedirs(write_path + '/grad-cam_images')
-    plt.savefig(write_path + '/grad-cam_images/' + 'grad-cam_image_' + str(counter) + '.' + store_format)
+    if not os.path.exists(write_path + '/grad-cam-images'):
+        os.makedirs(write_path + '/grad-cam-images')
+    plt.savefig(write_path + '/grad-cam-images/' + 'grad-cam-image_' + str(counter) + '.' + store_format)
     plt.clf()

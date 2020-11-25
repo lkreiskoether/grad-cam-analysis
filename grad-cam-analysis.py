@@ -16,12 +16,10 @@ import sys
 # changing the 'preprocess_input' , the 'unscale_input' function and the 'unpreprocess_input' function.
 
 
-image_shape = [700, 700]
-num_classes = 5
 model_str = sys.argv[1]
-print(model_str)
 data_path = sys.argv[2]
-print(data_path)
+image_shape = list(map(int, sys.argv[3].strip('[]').split(',')))
+num_classes = int(sys.argv[4])
 
 activation_tensor_gradcam = 'cf/StatefulPartitionedCall/vgg16/block5_conv3/Relu:0'  #insert here (last) convolutional layer
 input_tensor = 'x:0'

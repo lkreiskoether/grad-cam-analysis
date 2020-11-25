@@ -9,6 +9,11 @@ Clone the repository:
 git clone https://github.com/lkreiskoether/grad-cam-analysis.git
 ```
 
+## General usage
+```sh
+python grad-cam-analysis.py <path to model> <path to image folder> '[<x-dim images>,<y-dim images>]' <number of classes>
+```
+
 ## Example usage
 ```sh
 python grad-cam-analysis.py model/frozen_graph.pb color '[700,700]' 5

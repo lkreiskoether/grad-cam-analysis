@@ -11,7 +11,7 @@ git clone https://github.com/lkreiskoether/grad-cam-analysis.git
 
 ## Example usage
 ```sh
-python grad-cam-analysis.py model/frozen_graph.pb color
+python grad-cam-analysis.py model/frozen_graph.pb color '[700,700]' 5
 ```
 
 ## Example results
